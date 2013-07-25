@@ -70,30 +70,39 @@ def calc_quality(info):
     return zipfsong
 
 #-----------------------------------------------------------------#
+"""
+"""
 
-info = read_input()
+def main():
 
-try:
-    zipfsong = calc_quality(info)
+    info = read_input()
 
-    for i in range(int(info[1])):
-        print zipfsong[i][1]
+    try:
+        zipfsong = calc_quality(info)
 
-except Exception:         # if not expected input, then print an error message
-    print 'hey Spotify, please check your input!'
+        for i in range(int(info[1])):
+            print zipfsong[i][1]
+
+    except Exception:         # if not expected input, then print an error message
+        print 'hey Spotify, please check your input!'
 
 #-----------------------------------------------------------------#
 """
 Assert statements using the above sample test cases
 """
 
-test1 = ['4', '2', '30', 'one', '30', 'two', '15', 'three', '25', 'four']
-assert calc_quality(test1)[0:2] == [(100, 'four'), (60, 'two')]
-test2 = ['15', '3', '197812', 're_hash', '78906', '5_4', '189518', 'tomorrow_comes_today', 
-         '39453', 'new_genious', '210492', 'clint_eastwood', '26302', 'man_research', \
-         '22544', 'punk', '19727', 'sound_check', '17535', 'double_bass', '18782', \
-         'rock_the_house', '198189', '19_2000', '13151', 'latin_simone', '12139', \
-         'starshine', '11272', 'slow_country', '10521', 'm1_a1']
-assert calc_quality(test2)[0:3] ==  [(2180079, '19_2000'), (1052460, 'clint_eastwood'), (568554, 'tomorrow_comes_today')]
+def test():
+    test1 = ['4', '2', '30', 'one', '30', 'two', '15', 'three', '25', 'four']
+    assert calc_quality(test1)[0:2] == [(100, 'four'), (60, 'two')]
+    test2 = ['15', '3', '197812', 're_hash', '78906', '5_4', '189518', 'tomorrow_comes_today', 
+            '39453', 'new_genious', '210492', 'clint_eastwood', '26302', 'man_research', \
+            '22544', 'punk', '19727', 'sound_check', '17535', 'double_bass', '18782', \
+            'rock_the_house', '198189', '19_2000', '13151', 'latin_simone', '12139', \
+            'starshine', '11272', 'slow_country', '10521', 'm1_a1']
+    assert calc_quality(test2)[0:3] ==  [(2180079, '19_2000'), (1052460, 'clint_eastwood'), (568554, 'tomorrow_comes_today')]
+
+#-----------------------------------------------------------------#
+if __name__ == '__main__':
+    main()
 
 #-----------------------------------------------------------------#

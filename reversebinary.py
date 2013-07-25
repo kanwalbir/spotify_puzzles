@@ -31,22 +31,29 @@ def rev_bin(r):
     return n_rev
 
 #---------------------------------------------------------------------#
+"""
+"""
 
-print 'Please enter a valid positive integer:'
-r = raw_input()
+def main():
+    print 'Please enter a valid positive integer:'
+    r = raw_input()
 
-try: 
-    print rev_bin(r)
+    try: 
+        print rev_bin(r)
 
-except ValueError:          # if invalid entry, then print an error message
-    print 'hey Spotify, thats not a valid positive integer!'
+    except ValueError:          # if invalid entry, then print an error message
+        print 'hey Spotify, thats not a valid positive integer!'
 
 #---------------------------------------------------------------------#
 """
 Assert statements using the above sample test cases
 """
-
-assert rev_bin(13) == 11
-assert rev_bin(47) == 61
+def test():
+    assert rev_bin(13) == 11
+    assert rev_bin(47) == 61
 
 #---------------------------------------------------------------------#
+if __name__ == '__main__':
+    main()
+
+#-----------------------------------------------------------------#

@@ -89,28 +89,37 @@ def max_votes(test_case):
     return maximum
 
 #-----------------------------------------------------------------#
+"""
+"""
 
-info = read_input()
+def main():
 
-try:
-    satisfied = cat_dog(info)
+    info = read_input()
 
-    if not satisfied:
-        raise Exception
+    try:
+        satisfied = cat_dog(info)
 
-    for votes in satisfied:
-        print votes
+        if not satisfied:
+            raise Exception
 
-except Exception:         # if not expected input, then print an error message
-    print 'hey Spotify, please check your input!'
+        for votes in satisfied:
+            print votes
+
+    except Exception:         # if not expected input, then print an error message
+        print 'hey Spotify, please check your input!'
 
 #-----------------------------------------------------------------#
 """
 Assert statements using the above sample test cases
 """
 
-test1 = ['2', '1', '1', '2', 'C1', 'D1', 'D1', 'C1', '1', '2', '4', \
-         'C1', 'D1', 'C1', 'D1', 'C1', 'D2', 'D2', 'C1']
-assert cat_dog(test1) == [1, 3]
+def test():
+    test1 = ['2', '1', '1', '2', 'C1', 'D1', 'D1', 'C1', '1', '2', '4', \
+             'C1', 'D1', 'C1', 'D1', 'C1', 'D2', 'D2', 'C1']
+    assert cat_dog(test1) == [1, 3]
+
+#-----------------------------------------------------------------#
+if __name__ == '__main__':
+    main()
 
 #-----------------------------------------------------------------#
