@@ -39,6 +39,9 @@ tomorrow_comes_today
 """
 
 #-----------------------------------------------------------------#
+import sys
+
+#-----------------------------------------------------------------#
 """
 Read user input and return it in form of a list
 """
@@ -75,7 +78,7 @@ def calc_quality(info):
 
 def main():
 
-    info = read_input()
+    info = raw_input()
 
     try:
         zipfsong = calc_quality(info)

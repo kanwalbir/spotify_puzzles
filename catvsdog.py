@@ -20,6 +20,9 @@ Sample output 1
 """
 
 #-----------------------------------------------------------------#
+import sys
+
+#-----------------------------------------------------------------#
 """
 Read user input and return it in form of list
 """
@@ -94,7 +97,7 @@ def max_votes(test_case):
 
 def main():
 
-    info = read_input()
+    info = raw_input()
 
     try:
         satisfied = cat_dog(info)

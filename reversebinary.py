@@ -16,6 +16,9 @@ Sample output 2
 61
 """
 
+#-----------------------------------------------------------------#
+import sys
+
 #---------------------------------------------------------------------#
 """
 Convert integer into binary, reverse the binary, convert binary back 
@@ -35,11 +38,11 @@ def rev_bin(r):
 """
 
 def main():
-    print 'Please enter a valid positive integer:'
-    r = raw_input()
+
+    info = raw_input()
 
     try: 
-        print rev_bin(r)
+        print rev_bin(info)
 
     except ValueError:          # if invalid entry, then print an error message
         print 'hey Spotify, thats not a valid positive integer!'
